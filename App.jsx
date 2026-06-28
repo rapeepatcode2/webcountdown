@@ -123,12 +123,11 @@ const HighlightText = ({ text }) => {
   const isHot = text.match(/(ด่วน|สำคัญ|ระวัง|ร้อน|เตือน|อันตราย|!)/i);
   
   return (
-    <span className={`relative inline-block px-3.5 py-1.5 mx-1 my-1.5 rounded-xl border shadow-sm font-semibold transition-all hover:-translate-y-0.5 hover:shadow-md ${
-      isHot 
-        ? 'bg-gradient-to-br from-rose-50 to-orange-50 border-orange-200 text-orange-800' 
-        : 'bg-gradient-to-br from-indigo-50 to-fuchsia-50 border-indigo-200 text-indigo-800'
-    }`}>
-      {isHot ? (
+      <span className={'relative inline-block px-3.5 py-1.5 mx-1 my-1.5 rounded-xl border shadow-sm font-semibold transition-all hover:-translate-y-0.5 hover:shadow-md ' + (
+        isHot 
+          ? 'bg-gradient-to-br from-rose-50 to-orange-50 border-orange-200 text-orange-800' 
+          : 'bg-white border-gray-100 text-gray-600'
+      )}>
         <Flame className="inline-block w-4 h-4 mr-1.5 mb-0.5 animate-pulse text-orange-500" />
       ) : (
         <Sparkles className="inline-block w-4 h-4 mr-1.5 mb-0.5 text-indigo-500" />

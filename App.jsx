@@ -97,7 +97,7 @@ const ChatImage = ({ url, alt, isUser }) => {
         href={url} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className={`text-xs border p-1 rounded inline-block my-1 ${isUser ? 'border-indigo-400 text-indigo-200 hover:text-white' : 'border-gray-300 text-blue-500 hover:text-blue-700'} underline`}
+        className={'text-xs border p-1 rounded inline-block my-1 ' + (isUser ? 'border-indigo-400 text-indigo-200 hover:text-white' : 'border-gray-300 text-blue-500 hover:text-blue-700') + ' underline'}
       >
         [ลิงก์รูปภาพ: {alt || 'เปิดในหน้าต่างใหม่'}]
       </a>
